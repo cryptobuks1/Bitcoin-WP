@@ -17,7 +17,7 @@ get_header();
 			</header><!-- .page-header -->
 
 			<div class="page-content ">
-				<p><?php esc_html_e( 'Но не спешите уходить! Мы обязательно вам поможем', 'basic' ); ?></p>
+				<p><?php esc_html_e( 'КУДА ТЫ ЛЕЗЕШЬ! Мы обязательно вам поможем', 'basic' ); ?></p>
                 <a href="/">Вернуться на главную</a>
 
 
