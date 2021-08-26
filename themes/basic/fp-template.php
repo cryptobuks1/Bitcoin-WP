@@ -41,7 +41,7 @@ foreach ($terms as $single_term){
             $data['rating2'] = get_field('project_rating_2',$p->ID);
             $data['rating3'] = get_field('project_rating_3',$p->ID);
             $data['rating4'] = get_field('project_rating_4',$p->ID);
-            $data['total_rating'] = number_format(($data['rating1']+$data['rating2']+$data['rating3']+$data['rating4'])/4,2,'.','');
+            $data['total_rating'] = number_format(($data['rating1']+$data['rating2']+$data['rating3']+$data['rating4'])/4,1,'.','');
             $args['project'][] = $data;
         }
 

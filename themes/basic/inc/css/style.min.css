@@ -350,7 +350,7 @@ a {
 }
 
 body {
-  font-family: lato;
+  font-family: raleway;
   font-size: 14px;
 }
 
@@ -473,6 +473,10 @@ h1 {
   padding: 25px 0;
   background: #FFF;
   font-size: 16px;
+}
+.header .main-menu .directions {
+  font-size: 22px;
+  margin-right: 30px;
 }
 .header .main-menu .directions li {
   margin-right: 20px;
@@ -742,6 +746,7 @@ h1 {
   line-height: 1.4;
 }
 .project-panel__profit {
+  font-family: lato;
   font-size: 22px;
   font-weight: 700;
 }
@@ -765,6 +770,7 @@ h1 {
   position: relative;
 }
 .project-card .rating-label {
+  font-family: lato;
   background: #5528f6;
   padding: 4px 8px;
   border-radius: 5px;
@@ -776,6 +782,15 @@ h1 {
   text-align: center;
   /* padding: 10px; */
   line-height: 1.25;
+}
+.project-card .rating-label.high {
+  background: #8CD34C;
+}
+.project-card .rating-label.low {
+  background: #FF684E;
+}
+.project-card .rating-label div {
+  width: 58px;
 }
 .project-card .rating-label div {
   font-size: 30px;
@@ -793,6 +808,7 @@ h1 {
   line-height: 1.4;
 }
 .project-card__profit {
+  font-family: lato;
   font-size: 22px;
   font-weight: 700;
 }
@@ -807,6 +823,7 @@ h1 {
           flex-direction: column;
 }
 .rating-block__title {
+  font-family: lato;
   text-align: center;
   font-size: 22px;
   font-weight: 700;
@@ -822,6 +839,7 @@ h1 {
   margin-top: 15px;
 }
 .progress-line__title-wrapper {
+  font-family: lato;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 5px;
@@ -835,10 +853,10 @@ h1 {
   background: #5528f6;
 }
 .progress-line__progress.high {
-  background: #57cd57;
+  background: #8CD34C;
 }
 .progress-line__progress.low {
-  background: red;
+  background: #FF684E;
 }
 
 .detail-project {

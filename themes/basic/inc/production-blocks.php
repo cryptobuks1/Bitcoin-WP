@@ -411,7 +411,7 @@ function project_list_main($args)
                 </div>
             <div class = "mb40"></div>
             <div class = "tc">
-                <button class = "load-more btn1">Смотреть еще</button>
+                <a class = "load-more btn1" href = "<?php echo $args['link'] ?>" >Смотреть еще</a>
             </div>
         </div>
     </div>
