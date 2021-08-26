@@ -5,16 +5,7 @@ html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pr
 a, button{
   cursor:pointer;
 }
-.mw{
-  width: 100%;
-  max-width: 1920px;
-  margin: auto;
-}
-.mw2{
-  width: 100%;
-  max-width: 1720px;
-  margin: auto;
-}
+
 a{
   color: inherit;
   text-decoration:none;
@@ -62,11 +53,23 @@ a{
 .w33{
   width:33.33%;
 }
+.w45{
+  width:45%;
+}
 .w50{
   width:50%;
 }
+.w55{
+  width:55%;
+}
+.w66{
+  width:66.66%;
+}
 .w75{
   width:75%;
+}
+.w100{
+  width:100%;
 }
 .w-normal{
   font-weight:normal;

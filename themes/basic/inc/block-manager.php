@@ -26,10 +26,6 @@ function get_block($name, $args = null)
 function test()
 {
     ?>
-    <button class="btn1">Sign Up</button>
-    <button class="btn2">Sign Up</button>
-    <button class="btn3">Sign Up</button>
-
         <header class="header">
             <div class="header__upper-wrapper">
                 <div class="header__upper-header upper-header d-flex ac jb mw">
@@ -56,7 +52,9 @@ function test()
             <div class="header_main-menu-wrapper mw">
                 <div class="header__main-menu  main-menu d-flex jb">
                     <div class="main-menu__logo-wrapper w25">
+                        <a href = "<?php echo get_site_url() ?>">
                         <img class="logo" src="<?php echo get_template_directory_uri().'/inc/images/logo.png'?>"/>
+                        </a>
                     </div>
                     <div class="main-menu__right-wrapper d-flex je ac">
                         <nav>
@@ -87,14 +85,6 @@ function test()
                 </div>
             </div>
         </header>
-    <div class="title-wrapper">
-        <div class="pre-title">Our Services</div>
-        <h1>Why Choose Bitcoin</h1>
-        <div class = "d-flex jc"><span class="underline">#</span></div>
-        <div class="caption">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-            nisi elit consequat ipsum, nec sagittis sem nibh id elit duis sed odio sit.</div>
-
-    </div>
 
     <div class="items-list">
         <div class="single-iteme">
