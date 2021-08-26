@@ -369,3 +369,51 @@ function single_project($args)
     </div>
     <?php
 }
+function project_list_main($args)
+{
+    ?>
+    <div class = "project-card-list">
+        <div class = "mw">
+            <div class="title-wrapper">
+                <h2><a href="<?php echo $args['link']?>"><?php echo $args['name']?></a> </h2>
+                <div class = "mb40"><span class="underline">#</span>
+                </div>
+            </div>
+                <div class = "product-card-list__projects d-flex jb fw">
+            <?php
+            foreach ($args['project'] as $project)
+            {
+                ?>
+
+                <div class = "project-card d-flex jb">
+                    <?php
+                    $class = '';
+                    if ($project['total_rating']>=9)
+                        $class = 'high';
+                    else if ($project['total_rating']<3)
+                    $class = 'low';
+                    ?>
+                    <div class = "rating-label <?php echo $class?>">Рейтинг <div><?php echo $project['total_rating'] ?></div></div>
+                    <div class = "project-card__content">
+                        <div class = "project-card__title mb10"><?php echo $project['name'] ?></div>
+                        <div class = "mb20"><a class = "basic-link" href = "<?php echo $project['external_link'] ?>">Перейти на сайт проекта</a></div>
+                        <div class = "project-card__description mb20"><?php echo $project['description'] ?></div>
+                        <div class = "project-card__profit mb30">Доходность: <span><?php echo $project['profit'] ?></span></div>
+                        <div class = "project-card__btns-wrapper">
+                            <a class = "btn2" href = "<?php echo $project['link'] ?>">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
+                    <div class = "project-card-ph"></div><div class = "project-card-ph"> </div>
+                </div>
+            <div class = "mb40"></div>
+            <div class = "tc">
+                <button class = "load-more btn1">Смотреть еще</button>
+            </div>
+        </div>
+    </div>
+    <?php
+}

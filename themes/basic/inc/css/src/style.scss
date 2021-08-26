@@ -404,6 +404,21 @@ h1{
   @extend %block-bg1;
 }
 
+.project-card-list
+{
+  @extend %blockDefault;
+  &:nth-of-type(odd)
+  {
+    @extend %block-bg1;
+  }
+
+  &:nth-of-type(even)
+  {
+    @extend %block-bg2;
+  }
+}
+
+
 .project-panel
 {
   @extend %hover-left-border;
@@ -437,6 +452,64 @@ h1{
     font-weight:700;
   }
 }
+
+.product-card-list__projects
+ {
+   .project-card
+   {
+     width:32%;
+   }
+  .project-card-ph{
+    width:32%;
+    height:0;
+  }
+ }
+
+.project-card
+{
+  flex:0 0 auto;
+  @extend %hover-left-border;
+  padding: 40px;
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+  background:$light-bg2;
+  position:relative;
+  .rating-label{
+    background:$blue2;
+    padding:4px 8px;
+    border-radius:5px;
+    color:#fff;
+    font-size:16px;
+    position:absolute;
+    right:20px;
+    top:50px;
+    text-align: center;
+    /* padding: 10px; */
+    line-height: 1.25;
+    div{
+      font-size:30px;
+    }
+  }
+  &__content{
+
+  }
+  &__title{
+    font-size:22px;
+    font-weight:700;
+    width:60%;
+    height:2.4em;
+  }
+  &__description{
+    height: 7em;
+    overflow: hidden;
+    font-size:16px;
+    line-height: 1.4;
+  }
+  &__profit{
+    font-size:22px;
+    font-weight:700;
+  }
+}
+
 
 .rating-block{
   display:flex;
@@ -543,3 +616,28 @@ h1{
     }
   }
 }
+.footer {
+  font-size: 19px;
+
+  &__top {
+    padding:65px 0;
+    background-image: url("../images/footer_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    .top-wrapper {
+      color: $white1;
+      ul{
+        padding:0 30px;
+        li{
+          div::before {
+            margin-right: 10px;
+          }
+        }
+      }
+
+    }
+
+
+    }
+  }
+

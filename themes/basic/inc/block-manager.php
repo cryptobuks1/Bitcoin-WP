@@ -23,7 +23,7 @@ function get_block($name, $args = null)
             $GLOBALS['last_tick'] = $last_tick;*/
 };
 
-function test()
+function test($args)
 {
     ?>
         <header class="header">
@@ -59,21 +59,12 @@ function test()
                     <div class="main-menu__right-wrapper d-flex je ac">
                         <nav>
                             <ul class="main-menu__directions directions d-flex">
-                                <li class="directions__single-direction hover-line">
-                                    <a>Направление 1</a>
-                                </li>
-                                <li class="hover-line">
-                                    <a>Направление 2</a>
-                                </li>
-                                <li class="hover-line">
-                                    <a>Направление 3</a>
-                                </li>
-                                <li class="hover-line">
-                                    <a>Направление 1</a>
-                                </li>
-                                <li class="hover-line">
-                                    <a>Направление 1</a>
-                                </li>
+                                <?php foreach ($args['directions'] as $item){
+                                    ?>
+                                    <li class="directions__single-direction hover-line">
+                                        <a href="<?php echo $item['link']?>"><?php echo $item['name']?></a>
+                                    </li>
+                                <?php } ?>
                             </ul>
                         </nav>
                         <ul class="d-flex">
@@ -93,7 +84,28 @@ function test()
     </div>
     <?php
 }
+function footer_block($args)
+{
+    ?>
+        <footer class="footer">
+            <div class="footer__top">
+                <div class="top-wrapper mw d-flex jb">
+                    <ul class="footer__right-block w50">
+                        <li class="mb20"><img class="logo" src="<?php echo get_template_directory_uri().'/inc/images/logo2.png'?>"/></li>
+                        <li class="mb20">Lorem ipsum dolor sit amet, consetur acing elit, sed do eiusmod ligal</li>
+                        <li class="mb20"><div class="icon-location">Gopalpur Noth Sarkartary</div></li>
+                        <li class="mb20"><div class="icon-phone">(+99) 0123 4567 8</div></li>
+                        <li class="mb20"><div class="icon-sphere">example@example.com</div></li>
+                    </ul>
+                    <ul class="footer__right">
 
+                    </ul>
+                </div>
+
+            </div>
+        </footer>
+    <?php
+}
 
 
 

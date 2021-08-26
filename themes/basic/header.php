@@ -33,6 +33,18 @@ require get_template_directory() . '/inc/block-manager.php';;
             return !empty(acf_photo_gallery($name,$post->ID))?acf_photo_gallery($name,$post->ID):acf_photo_gallery($name,$homeID);
         }
         $args = [];
+        $terms = get_terms( array(
+            'taxonomy' => 'directions',
+            'hide_empty' => true,
+        ) );
+
+        foreach ($terms as $single_term){
+            $block = [];
+            $block['name'] = $single_term->name;
+            $block['link'] = get_term_link($single_term->term_id);
+            $args['directions'][] = $block;
+        }
+
         get_block('test',$args);
 
         $args = [

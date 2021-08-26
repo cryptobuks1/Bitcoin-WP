@@ -8,6 +8,8 @@
  *
  * @package basic
  */
+$args = [];
+get_block('footer_block',$args);
 ?>
 </div>
 
