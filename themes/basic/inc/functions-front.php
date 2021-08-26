@@ -10,8 +10,8 @@ wp_enqueue_style( 'main-style', get_template_directory_uri().'/inc/css/style.min
 wp_enqueue_script( 'main-script',get_template_directory_uri().'/inc/js/script.js', array('jquery'), _S_VERSION,true );
 
     
-//wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/inc/css/slick.css');
-//wp_enqueue_script( 'slick-script',get_template_directory_uri().'/inc/js/slick.min.js', array(), _S_VERSION,true );
+wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/inc/css/slick.css');
+wp_enqueue_script( 'slick-script',get_template_directory_uri().'/inc/js/slick.min.js', array('jquery'), _S_VERSION,true );
 
     //wp_dequeue_style( 'wp-block-library' );
     //wp_dequeue_style( 'wc-block-style' );

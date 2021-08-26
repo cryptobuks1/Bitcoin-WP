@@ -7,15 +7,32 @@ global $post;
 global $r_opt;
 //file_get_contents('https://a.sofosbuvir-gepamir.ru/daklatasvir/');
 get_header();
-function check_get_field($name){
-$homeID = get_option('page_on_front');
-return (get_field($name)!='')?get_field($name):get_field($name,$homeID);
-}
 
-function check_acf_photo_gallery($name){
-    global $post;
-    $homeID = get_option('page_on_front');
-    return !empty(acf_photo_gallery($name,$post->ID))?acf_photo_gallery($name,$post->ID):acf_photo_gallery($name,$homeID);
-}
+get_block('category_header_block',[
+    'category_title'=>'Направление 1',
+    'category_description'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took '
+]);
+
+$projects = get_posts([
+    'post_type'=>'project'
+]);
 $args = [];
-get_block('test',$args);
+foreach ($projects as $p)
+{
+    $data = [];
+    $data['name'] = $p->post_title;
+    $data['description'] = get_field('project_short_description',$p->ID);
+    $data['external_link'] = get_field('project_ref_link',$p->ID);
+    $data['link'] = get_post_permalink($p->ID);
+    $data['profit'] = get_field('project_money',$p->ID);
+    $data['rating1'] = get_field('project_rating_1',$p->ID);
+    $data['rating2'] = get_field('project_rating_2',$p->ID);
+    $data['rating3'] = get_field('project_rating_3',$p->ID);
+    $data['rating4'] = get_field('project_rating_4',$p->ID);
+    $data['total_rating'] = number_format(($data['rating1']+$data['rating2']+$data['rating3']+$data['rating4'])/4,2,'.','');
+    $args[] = $data;
+}
+get_block('project_detail_panel',$args);
+get_footer();
+
+
